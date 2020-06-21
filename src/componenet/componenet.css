@@ -1,0 +1,131 @@
+body {
+    margin: -5px;
+    padding: -5px;
+}
+
+.paddingmenu {
+    padding-bottom: 2px;
+    border-bottom: 1px solid gray;
+}
+
+.paddingmenu :hover {
+    background-color: white;
+    color: black;
+}
+
+.menuwidh:hover {
+    background-color: white;
+    color: black;
+}
+
+.menuwidh {
+    background-color: blueviolet;
+}
+
+.centre-item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Content {
+    margin-top: 60px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination {
+    display: flex;
+    list-style-type: none;
+}
+
+.pagination button,
+.bagroundcolortransparent {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.succes {
+    color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.disabelbutton {
+    display: none !important;
+}
+
+.dispalyflexbettwen {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bagroundcolortransparent {
+    color: #28a745;
+    font-size: 20px;
+    padding-left: 35px;
+}
+
+.dispalyflex {
+    display: flex;
+}
+
+.widthw10 {
+    width: 15px;
+}
+
+.colorwhite {
+    color: rgb(165, 10, 102) !important;
+}
+
+.flex-warped {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.segment {
+    display: block;
+    padding-left: 100px;
+    padding-right: 150px;
+}
+
+.alignitem {
+    align-items: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.flexinput {
+    display: flex;
+    justify-content: space-around;
+}
+
+.marginletf30 {
+    margin-left: 80px;
+}
+
+.footer {
+    background: #a59891;
+    height: 80px;
+    margin-top: 20px;
+    padding-top: 20px;
+    color: #fff;
+    font-family: 'Futura Std medium';
+    position: relative;
+    bottom: 0px;
+}

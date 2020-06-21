@@ -1,0 +1,284 @@
+{
+  "users": [
+    {
+      "first_name": "amanii",
+      "last_name": "BEN Salhh",
+      "email": "BENAmani2020@gmail.com",
+      "password": "123456",
+      "image": "https://semantic-ui.com/images/avatar2/large/kristy.png",
+      "role": "user",
+      "posteOcuper": "Responsable production",
+      "id": 3
+    },
+    {
+      "first_name": "manel",
+      "last_name": "boudebana",
+      "email": "BENAmani2020@gmail.com",
+      "password": "123456",
+      "image": "https://semantic-ui.com/images/avatar2/large/kristy.png",
+      "role": "user",
+      "posteOcuper": "Responsable achat",
+      "id": 1
+    },
+    {
+      "first_name": "oussama",
+      "last_name": "hassani",
+      "email": "oussa@gmail.com",
+      "password": "123456",
+      "image": "moderateur",
+      "posteOcuper": "123466",
+      "dateInscription": "21/06/2020",
+      "id": 4
+    },
+    {
+      "first_name": "OUSSAMA",
+      "last_name": "hassani",
+      "email": "oussama@gmail.com",
+      "password": "123456",
+      "image": "image",
+      "posteOcuper": "post1",
+      "role": "admin",
+      "dateInscription": "21/06/2020",
+      "id": 5
+    }
+  ],
+  "ListeProduit": [
+    {
+      "name": "xxx",
+      "color": "y",
+      "categorie": "z",
+      "image": "npn",
+      "id": 1,
+      "ok": [
+        {
+          "text": "oppa 7ssin",
+          "date": "21/06/2020"
+        },
+        {
+          "text": "7asinin",
+          "date": "21/06/2020"
+        },
+        {
+          "text": "sasa",
+          "date": "21/06/2020"
+        },
+        {
+          "text": "ya 7ousin",
+          "date": "21/06/2020"
+        },
+        {
+          "text": "kkkkkkk",
+          "date": "21/06/2020"
+        },
+        {
+          "text": "kkjkj",
+          "date": "21/06/2020, 12:39:15 pm"
+        },
+        {
+          "text": "kkjkj",
+          "date": "21/06/2020, 12:40:00 pm"
+        }
+      ],
+      "type": "type1",
+      "collection": "cole1",
+      "couleur": "vert",
+      "quantite": "50064",
+      "prix": "12dt",
+      "marque": "chino",
+      "reference": "#fdr102-1",
+      "datemodification": "21/06/2020"
+    },
+    {
+      "name": "x",
+      "color": "y",
+      "categorie": "z",
+      "image": "e",
+      "id": 2,
+      "ok": [
+        {
+          "text": "hhh",
+          "id": "1",
+          "nameuser": "3",
+          "roleuser": "blla",
+          "date": "12/06/2019"
+        },
+        {
+          "text": "hhh",
+          "id": "2",
+          "nameuser": "3",
+          "roleuser": "blla",
+          "date": "12/06/2019"
+        },
+        {
+          "text": "fok alik a4tak",
+          "date": "21/06/2020, 12:43:35 pm"
+        }
+      ]
+    }
+  ],
+  "historique": [
+    {
+      "username": "admin",
+      "somme": 20,
+      "nombrearticle": 2,
+      "date": "Tue Jun 09 2020 12:51:21 ",
+      "id": 1
+    },
+    {
+      "username": "aymen",
+      "somme": 230,
+      "nombrearticle": 2,
+      "date": "Tue Jun 09 2020 12:54:00 ",
+      "id": 2
+    },
+    {
+      "username": "amani",
+      "somme": 30,
+      "nombrearticle": 1,
+      "date": "Fri Jun 12 2020 20:32:21 ",
+      "id": 3
+    },
+    {
+      "username": "amani",
+      "somme": 10,
+      "nombrearticle": 1,
+      "date": "Fri Jun 12 2020 20:36:33 ",
+      "id": 4
+    },
+    {
+      "username": "amani",
+      "somme": 20,
+      "nombrearticle": 1,
+      "date": "Fri Jun 12 2020 21:50:04 ",
+      "id": 5
+    },
+    {
+      "username": "admin",
+      "somme": 50,
+      "nombrearticle": 1,
+      "date": "Fri Jun 12 2020 21:52:46 ",
+      "id": 6
+    },
+    {
+      "username": "admin",
+      "somme": 10,
+      "nombrearticle": 1,
+      "date": "Fri Jun 12 2020 22:01:20 ",
+      "id": 13
+    },
+    {
+      "username": "admin",
+      "somme": 10,
+      "nombrearticle": 1,
+      "date": "Fri Jun 12 2020 22:02:24 ",
+      "id": 14
+    },
+    {
+      "username": "oussama",
+      "somme": 50,
+      "nombrearticle": 1,
+      "date": "Sun Jun 14 2020 17:50:32 ",
+      "id": 15
+    },
+    {
+      "username": "oussama",
+      "somme": 290,
+      "nombrearticle": 2,
+      "date": "Sun Jun 14 2020 18:02:21 ",
+      "id": 16
+    },
+    {
+      "username": "oussama",
+      "somme": 0,
+      "nombrearticle": 2,
+      "date": "Sun Jun 14 2020 23:32:44 ",
+      "id": 17
+    },
+    {
+      "username": "oussama",
+      "somme": 580,
+      "nombrearticle": 2,
+      "date": "Mon Jun 15 2020 11:39:40 ",
+      "id": 18
+    },
+    {
+      "username": "oussama",
+      "somme": 80,
+      "nombrearticle": 1,
+      "date": "Mon Jun 15 2020 11:45:19 ",
+      "id": 19
+    },
+    {
+      "username": "amin",
+      "somme": 32,
+      "nombrearticle": 1,
+      "date": "Tue Jun 16 2020 10:03:31 ",
+      "id": 20
+    },
+    {
+      "name": "produit4",
+      "type": "type1",
+      "collection": "chter",
+      "marque": "golchi",
+      "reference": "reference2",
+      "image": "nonplus",
+      "prix": "30",
+      "quantite": "quantité111",
+      "color": "couleur1",
+      "date-action": "21/06/2020",
+      "action": "modification",
+      "id": 21
+    },
+    {
+      "name": "oussma",
+      "type": "type1",
+      "collection": "sif",
+      "marque": "golchi",
+      "reference": "marque",
+      "image": "ssss",
+      "prix": "20",
+      "quantite": "12",
+      "color": "bleu",
+      "date-action": "21/06/2020",
+      "action": "ajoute produit ",
+      "id": 22
+    },
+    {
+      "name": "ok",
+      "type": "oussama",
+      "collection": "oussama",
+      "marque": "ok",
+      "reference": "oussama",
+      "image": "ok",
+      "prix": "oussama",
+      "quantite": "ok",
+      "color": "oussaamma",
+      "date-action": "21/06/2020",
+      "action": "ajoute produit ",
+      "id": 23
+    },
+    {
+      "name": "ok",
+      "type": "oussama",
+      "collection": "oussama",
+      "marque": "ok",
+      "reference": "oussama",
+      "image": "ok",
+      "prix": "oussama",
+      "quantite": "ok",
+      "color": "oussaamma",
+      "date-action": "21/06/2020",
+      "action": "produit suprimer",
+      "id": 24
+    }
+  ],
+  "comentair": [
+    {
+      "id": "x",
+      "iduser": "y",
+      "idproduit": "z",
+      "text": "e",
+      "date": 1202018
+    }
+  ]
+}
