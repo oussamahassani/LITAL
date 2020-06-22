@@ -61,7 +61,7 @@ function Allproduct(props) {
         <h3>Gestion des Produit Lital</h3>
         <div className="row">
           <div className="col-xs-12 box_change_pagelimit">
-            select filter
+            Select affichage
                  <select
               className="form-control"
               value={state.pageLimit}
@@ -97,7 +97,7 @@ function Allproduct(props) {
         </table>
         <div className="col-xs-12 box_pagination_info text-right">
           <p>
-            {props.prod.product.length}  item  actuelle : {state.currentPage}/{state.totalPages}
+          Nombre de produit: {props.prod.product.length} page  {state.currentPage}/{state.totalPages}
           </p>
         </div>
         <div className="col-xs-12 dispalyflexbettwen">

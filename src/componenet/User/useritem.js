@@ -32,9 +32,9 @@ class Useritem extends Component {
             <span className=" ui submit button miniwidthbtn widthw10" onClick={() => this.setState({ changetype: !this.state.changetype })}>{this.state.changetype ? "👁" : "🧐"} </span>
           </td>
           <td width="5%"> <img src={donner.image} width="50px" /></td>
-          <td width="20%"> <div className="flex-bettwen"><button onClick={() => delet(donner.id)} class="ui inverted red button"><i class="trash icon"></i></button>{" "}
-            <NavLink to='/update-user'> <button onClick={() => update(donner.id)} class="ui inverted yellow button" ><i class="edit icon">
-            </i></button> </NavLink>  <button onClick={this.show} class="ui inverted blue button"><i class="eye icon"></i></button></div> </td>
+          <td width="20%"> <div className="flex-bettwen"><button  onClick={() => delet(donner.id)} class="bagroundcolortransparent red"><i class="trash icon"></i></button>{" "}
+            <NavLink to='/update-user'> <button  onClick={() => update(donner.id)} class="bagroundcolortransparent yellow" ><i class="edit icon">
+            </i></button> </NavLink>  <button   onClick={this.show} class="bagroundcolortransparent vert"><i class="eye icon"></i></button></div> </td>
         </tr>
 
 
@@ -45,15 +45,6 @@ class Useritem extends Component {
             <Modal.Title>pressone Matricule  {donner.id}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>
-              Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
-              commodi aspernatur enim, consectetur. Cumque deleniti temporibus
-              ipsam atque a dolores quisquam quisquam adipisci possimus
-              laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
-              accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
-              reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
-              deleniti rem!
-          </p>
             <table class="ui blue table">
               <thead>
                 <tr><th>id</th>

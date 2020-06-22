@@ -1,7 +1,9 @@
 import React, { useState,useRef } from 'react'
 import { connect } from "react-redux";
+import axios from 'axios';
 import swal from 'sweetalert';
-
+import {ProgressBar} from  'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
 /* componenet */
 import { postnewproduct } from '../../../action/produit'
 import {setnewhistoriquefromapi} from '../../../action/historiquaction'
@@ -9,7 +11,9 @@ import { Navbar } from "../../composant";
 import { Background } from "../../composant";
 import { Sidebar } from "../../composant";
 import { unmountComponentAtNode } from 'react-dom';
+let x = ""
 function Addprodact(props) {
+  const [staselectedFilete, setselectedFile] = useState(null)
   const contenu = useRef()
   const [isOpened, setIsOpened] = useState(false);
   let refinput = {};
@@ -21,7 +25,8 @@ function unmout()
   function show() {
     let x = Object.values(refinput).map(el => el.value)
     props.postnewproduct(x)
-    props.setnewhistoriquefromapi(x,'ajoute produit ')
+    props.setnewhistoriquefromapi(x,'ajoute produit')
+    onClickHandler()
     swal({
       title: "ajouter un nouvaux Produit?",
       text: "voulez vous ajouter un nouveaux produit!",
@@ -41,6 +46,56 @@ function unmout()
 
      
   }
+  const  checkMimeType=(event)=>{
+    //getting file object
+    let files = event.target.files 
+    //define message container
+    let err = []
+    // list allow mime type
+   const types = ['image/png', 'image/jpeg', 'image/gif']
+    // loop access array
+    for(var x = 0; x<files.length; x++) {
+     // compare file type find doesn't matach
+         if (types.every(type => files[x].type !== type)) {
+         // create error message and assign to container   
+         err[x] = files[x].type+' is not a supported format\n';
+       }
+     };
+     for(var z = 0; z<err.length; z++) {// if message not same old that mean has error 
+         // discard selected file
+        toast.error(err[z])
+        event.target.value = null
+    }
+   return true;
+  }
+ const onChangeHandler=event=>{
+   let files = event.target.files
+    if(checkMimeType(event) ){ 
+    // if return true allow to setState
+    setselectedFile(files)
+  }
+  }
+ const onClickHandler = () => {
+    const data = new FormData()
+      data.append('file',  staselectedFilete)
+       console.log(data , staselectedFilete)
+    axios.post("http://localhost:8000/upload", data, {
+      onUploadProgress: ProgressEvent => {
+       
+          x =  (ProgressEvent.loaded / ProgressEvent.total*100)
+      
+      },
+    })
+      .then(res => { // then print response status
+        toast.success('upload success')
+        console.log(res)
+      })
+      .catch(err => { // then print response status
+        toast.error('upload fail')
+        console.log(err)
+      })
+    }
+
   return (
     <div>
       <Navbar toggleMenu={setIsOpened} />
@@ -93,6 +148,19 @@ function unmout()
                   <label>Couleur</label>
                   <p>  <input ref={e => refinput.couleur = e} type="text" placeholder="Couleur" /></p>
                 </div>
+              </div>
+              <div class="row">
+      	  <div class="offset-md-3 col-md-6">
+               <div class="form-group files">
+                <label>Upload Your File </label>
+                <input type="file" class="form-control"  onChange={onChangeHandler}/>
+              </div>  
+              <div class="form-group">
+              <ToastContainer />
+              <ProgressBar max="100" color="success" value={x} >{Math.round(x,2) }%</ProgressBar>
+        
+              </div> 
+              </div>
               </div>
               <div class="field">
                 <br></br>

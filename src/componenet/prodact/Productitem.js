@@ -62,13 +62,13 @@ import swal from 'sweetalert';
      <td className="alignitem"><img src={props.product.image} alt={props.product.name + props.product.id} width="100px"/></td>
     
      <td><a href={'comentaire?' + props.product.id}><i class="facebook messenger icon"></i>{x.length}</a></td>
-     <td > <div className="flex-bettwen"><button onClick={()=>delate() } class="ui inverted red button"><i class="trash icon"></i></button>{" "}
-<NavLink to='/update-produit'> <button onClick={() => update()} class="ui inverted yellow button" ><i class="edit icon"></i>
-</button> </NavLink>  <button onClick={() => shows()} class="ui inverted blue button"><i class="eye icon"></i></button></div> </td>
+     <td > <div className="flex-bettwen"><button onClick={()=>delate() } class="bagroundcolortransparent colorred"><i class="trash icon"></i></button>{" "}
+<NavLink to='/update-produit'> <button onClick={() => update()} class=" bagroundcolortransparent coloryellow" ><i class="edit icon"></i>
+</button> </NavLink>  <button onClick={() => shows()} class="bagroundcolortransparent vertcolor" ><i class="eye icon"></i></button></div> </td>
  </tr>
 
 
- <Modal show={valeur} onHide={handleClose} dialogClassName="modal-90w"
+ <Modal show={valeur} onHide={handleClose} dialogClassName="modal-100w" animation = {true}
         aria-labelledby="example-custom-modal-styling-title" size="xl">
        <Modal.Header closeButton>
    <Modal.Title>Transaction numero {props.product.id}</Modal.Title>
@@ -85,6 +85,8 @@ import swal from 'sweetalert';
     <th>Image</th>
     <th>Prix</th>
     <th>Color</th>
+    <th>Date ajoute</th>
+    <th>Date Modification</th>
    </tr></thead><tbody>
        <tr>
    <td>{props.product.id}</td>
@@ -96,6 +98,8 @@ import swal from 'sweetalert';
 <td className="alignitem"><img src={props.product.image} alt={props.product.name + props.product.id} width="100px"/></td>
 <td>{props.product.prix}</td>
 <td>{props.product.color}</td>
+<td>{props.product.dateajoute}</td>
+<td>{props.product.datemodification ? props.product.datemodification : "produit n'est pas modifier"}</td>
 </tr>
   </tbody>
   </table>

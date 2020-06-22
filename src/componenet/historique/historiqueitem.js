@@ -26,11 +26,12 @@ function handleClose(){
     <tr > 
 <td>{props.historique.id}</td>
 <td>{props.historique.username}</td>
-<td>{props.historique.somme}</td>
-<td>{props.historique.nombrearticle}</td>
-<td>{props.historique.date}</td>
+<td>{props.historique.name}</td>
+<td>{props.historique.reference}</td>
+<td>{props.historique.dateaction}</td>
+<td>{props.historique.action}</td>
 
-<td ><button onClick={view } className="bagroundcolortransparent"><i class="eye icon"></i></button></td>
+<td ><button onClick={view } className="bagroundcolortransparent vertcolor"><i class="eye icon"></i></button></td>
  </tr>
  <Modal show={state} onHide={handleClose} dialogClassName="modal-90w"
         aria-labelledby="example-custom-modal-styling-title" size="xl">
@@ -38,29 +39,37 @@ function handleClose(){
     <Modal.Title>Transaction numero {props.historique.id}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <p>
-            Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
-            commodi aspernatur enim, consectetur. Cumque deleniti temporibus
-            ipsam atque a dolores quisquam quisquam adipisci possimus
-            laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
-            accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
-            reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
-            deleniti rem!
-          </p>
         <table class="ui blue table">
      <thead>
-    <tr><th>id</th>
-      <th>nom</th>
-      <th>categorie</th>
-      <th>couleur</th>
-      <th>quantiter</th>
+    <tr><th>Id</th>
+      <th>Nom user</th>
+      <th>Nom Produit</th>
+      <th>Type </th>
+      <th>Collection</th>
+      <th>Marque</th>
+      <th>Reference</th>
+      <th>Image</th>
+      <th>Prix</th>
+      <th>Quantitée</th>
+      <th>Color</th>
+      <th>Date action</th>
+      <th>Action</th>
     </tr></thead><tbody>
         <tr>
     <td>{props.historique.id}</td>
 <td>{props.historique.username}</td>
-<td>{props.historique.somme}</td>
-<td>{props.historique.nombrearticle}</td>
-<td>{props.historique.date}</td></tr>
+<td>{props.historique.name}</td>
+<td>{props.historique.type}</td>
+<td>{props.historique.collection}</td>
+<td>{props.historique.marque}</td>
+<td>{props.historique.reference}</td>
+<td>< img src={props.historique.reference} alt={props.historique.id} width="100px"></img></td>
+<td>{props.historique.prix}</td>
+<td>{props.historique.quantite}</td>
+<td>{props.historique.color}</td>
+<td>{props.historique.dateaction}</td>
+<td>{props.historique.action}</td>
+</tr>
    </tbody>
    </table>
 

@@ -71,12 +71,33 @@ body {
     justify-content: space-between;
 }
 
-.bagroundcolortransparent {
+.vertcolor {
     color: #28a745;
     font-size: 20px;
     padding-left: 35px;
 }
-
+.vert{
+    color: #28a745;
+font-size: 20px;
+}
+.colorred{
+    color: #b9001f;
+    font-size: 20px;
+    padding-left: 35px;
+}
+.red{
+    color: #b9001f;
+font-size: 20px;
+}
+.coloryellow{
+    color: rgba(230, 230, 63, 0.678);
+    font-size: 20px;
+    padding-left: 35px;
+}
+.yellow{
+    color: rgba(230, 230, 63, 0.678);
+    font-size: 20px;  
+}
 .dispalyflex {
     display: flex;
 }
@@ -122,10 +143,12 @@ body {
 .footer {
     background: #a59891;
     height: 80px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding-top: 20px;
     color: #fff;
     font-family: 'Futura Std medium';
-    position: relative;
-    bottom: 0px;
+    position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }

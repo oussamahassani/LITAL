@@ -27,7 +27,7 @@ export  function getallhistoriquefromapi(){
       "prix":x[6],
       "quantite":x[7],
       "color": x[8],
-      "date-action":moment().format("DD/MM/YYYY"),
+      "dateaction":moment().format("DD/MM/YYYY"),
       "action":action
     })
    
@@ -45,6 +45,12 @@ export  function getallhistoriquefromapi(){
   export const changestatehistorique = (paylod) => ({
 
     type: types.FILTERHISTORIQUE,
+    paylod,
+
+  })
+  export const filteraction=(paylod) => ({
+
+    type: types.FILTEACTION,
     paylod,
 
   })
