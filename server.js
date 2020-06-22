@@ -3,12 +3,16 @@ var app = express();
 var multer = require('multer')
 var cors = require('cors');
 app.use(cors())
+
+let x = Date.now()
+let code = x.toString().substring(0,7)
+
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'public')
+      cb(null, 'public/imageuplod')
     },
     filename: function (req, file, cb) {
-      cb(null, Date.now() + '-' +file.originalname )
+      cb(null, code + '-' +file.originalname )
     }
   })
   
@@ -35,5 +39,5 @@ app.post('/upload',function(req, res) {
 });
 
 app.listen(8000, function() {
-    console.log('App running on port 8000');
+    console.log('App running on port 8080');
 });

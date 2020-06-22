@@ -46,31 +46,37 @@ function AddUsers(props) {
                   <label>Password</label>
                   <p> <input ref={e => refinput.pass = e} type="text" placeholder="Email" required /></p>
                 </div>
+                <div class="field">
+                  <label>image</label>
+                  <p>  <input ref={e => refinput.image = e} type="text" placeholder="URL IMAGE" /></p>
+                </div>
+              </div>
+
+
+
+
+              <div className="three fields">
+                <div class="field">
+                  <label>Post ocupee</label>
+                  <p> <input ref={e => refinput.Post = e} type="text" placeholder="Post Ocupee" required /></p>
+                </div>
+                <div class="field">
+                  <label>Role</label>
+                  <p>  <select ref={e => refinput.role = e} name="role" >
+                    <option value="admin">admin</option>
+                    <option value="moderateur">Moderateur</option>
+                    <option value="Autre">Autre</option>
+                  </select></p>
+                </div>
+              </div>
               <div class="field">
-                <label>image</label>
-                <p>  <input ref={e => refinput.image = e} type="text" placeholder="URL IMAGE" /></p>
+                <br></br>
+                <p> <button className="ui inverted yellow  button" onClick={() => show()}>Add user</button></p>
               </div>
-              </div>
-              <div class="field">
-                <label>Post ocupee</label>
-                <p> <input ref={e => refinput.Post = e} type="text" placeholder="Post Ocupee" required /></p>
-              </div>
-              <div class="field">
-                <label>Role</label>
-                <p>  <select ref={e => refinput.role = e} name="role" >
-                  <option value="admin">admin</option>
-                  <option value="moderateur">Moderateur</option>
-                  <option value="Autre">Autre</option>
-                </select></p>
-              </div>
-            <div class="field">
-              <br></br>
-              <p> <button className="ui inverted yellow  button" onClick={() => show()}>Add user</button></p>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div >
 
   )

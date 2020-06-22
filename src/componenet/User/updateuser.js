@@ -38,41 +38,48 @@ class Updateuser extends Component {
                 <Sidebar show={this.state.isOpened} setIsOpened={(x) => this.changer(x)} />
                 <div className="Content">
                     <h3 className="centre-item"> update user with id {this.state.id}</h3>
-                    <div className="contenaire  bagroundgray">
-
-                        <div class="fields">
-                            <label class="field">Name</label>
-                            <input style={{ marginLeft: '30px' }} class="field" type="text" value={this.state.first_name} onChange={(e) =>   this.setState({ first_name: e.target.value })}></input> <br /><br />
+                    <div className="contenaire ">
+                        <div className=" ui inverted segment">
+                        <div className="ui form inverted">
+                        <div className="three fields">
+                        <div class="field">
+                            <label >Name</label>
+                            <input type="text" value={this.state.first_name} onChange={(e) =>   this.setState({ first_name: e.target.value })}></input>
                         </div>
-                        <div class="fields">
-                            <label class="field">Last Name  </label>
-                            <input class="field" type="text" value={this.state.last_name} onChange={(e) =>  this.setState({ last_name: e.target.value })}></input><br /><br />
+                        <div class="field">
+                            <label>Last Name  </label>
+                            <input  type="text" value={this.state.last_name} onChange={(e) =>  this.setState({ last_name: e.target.value })}></input>
                         </div>
-                        <div class="fields">
-                            <label class="field">Email</label>
-                            <input style={{ marginLeft: '30px' }} class="field" type="text" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })}></input><br /><br />
+                        <div class="field">
+                            <label >Email</label>
+                            <input type="text" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })}></input>
                         </div>
-                        <div class="fields">
-                            <label class="field">Post</label>
-                            <input style={{ marginLeft: '30px' }} class="field" type="text" value={this.state.role} onChange={(e) => this.setState({ post: e.target.value })}></input><br /><br />
                         </div>
-                        <div class="fields">
-                            <label class="field">Role</label>
+                        <div class="two fields">
+                        <div class="field">
+                            <label >Post</label>
+                            <input  type="text" value={this.state.role} onChange={(e) => this.setState({ post: e.target.value })}></input><br /><br />
+                        </div>
+                        <div class="field">
+                            <label >Role</label>
                             <select id="role" name="role" onChange={(e) => this.setState({ role: e.target.value})}> 
                                 <option value="admin">admin</option>
                                 <option value="moderateur">Moderateur</option>
                                 <option value="Autre">Autre</option>
                             </select>
                         </div>
+                        </div>
                         <div class="fields">
-                            <label class="field" style={{ marginLeft: '5px' }}>Password</label>
+                            <label class="field" >Password</label>
                             <input class="field" type="text" value={this.state.password} onChange={(e) =>   this.setState({ password: e.target.value })}></input><br /><br />
                         </div>
                         <div class="fields">
                             <label class="field">Avatar</label>
-                            <input class="field" style={{ marginLeft: '30px' }} type="text" value={this.state.image} ></input>
+                            <input class="field" type="text" value={this.state.image} ></input>
                         </div>
-                        <NavLink to="/user" ><p> <button style={{ marginTop: '30px', marginLeft: '350px' }} className="ui inverted yellow  button centre-item " onClick={() => update(first_name, last_name, email, password, image, id)}>Update USER</button></p></NavLink>
+                        <NavLink to="/user" ><p> <button  className="ui inverted yellow  button centre-item " onClick={() => update(first_name, last_name, email, password, image, id)}>Update USER</button></p></NavLink>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </>

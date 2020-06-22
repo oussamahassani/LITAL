@@ -3,14 +3,14 @@ import * as types from './type'
 import {URL}  from './baseurl'
 import Axios from 'axios';
 // post new product
-export  function postnewproduct(x){
+export  function postnewproduct(x,image){
   let  paylod = {
     "name": x[0],
     "type":x[1] ,
     "collection":x[2],
     "marque":x[3],
     "reference":x[4],
-    "image": x[5],
+    "image": image !== null ? image :  x[5],
     "prix":x[6],
     "quantite":x[7],
     "color": x[8],
@@ -25,7 +25,7 @@ paylod
      )
     .then ((res) => dispatch(addproduct(paylod) , console.log("listedeprosuit",res.data)) )
    
-    .catch((error) => alert(error +"liste produit post"))
+    .catch((error) => console.log(error +"liste produit post"))
    }
 export const addproduct = (paylod) => 
 ({

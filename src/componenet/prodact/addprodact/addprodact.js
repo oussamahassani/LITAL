@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react'
+import React, { useState,useRef,useEffect} from 'react'
 import { connect } from "react-redux";
 import axios from 'axios';
 import swal from 'sweetalert';
@@ -12,37 +12,62 @@ import { Background } from "../../composant";
 import { Sidebar } from "../../composant";
 import { unmountComponentAtNode } from 'react-dom';
 let x = ""
+let image=""
 function Addprodact(props) {
   const [staselectedFilete, setselectedFile] = useState(null)
   const contenu = useRef()
+  const file=useRef("none")
   const [isOpened, setIsOpened] = useState(false);
+  const [uncheked, setuncheked] = useState();
+ const mychekbox = useRef()
   let refinput = {};
+  useEffect(() => {
+
+    chekedcondition()
+    
+    
+  }, [])
 function unmout()
 {
-  contenu.current.innerHTML= "<div> Votre Donner A eté ajouter  avec Succeé vous pouvez consulter votre Liste de produit</div>"
+  contenu.current.innerHTML= "<div><h1> Votre Donner A eté ajouter  avec Succeé vous pouvez consulter votre Liste de produit<h1></div>"
 }
 
   function show() {
-    let x = Object.values(refinput).map(el => el.value)
-    props.postnewproduct(x)
-    props.setnewhistoriquefromapi(x,'ajoute produit')
-    onClickHandler()
-    swal({
-      title: "ajouter un nouvaux Produit?",
-      text: "voulez vous ajouter un nouveaux produit!",
-      icon: "info",
-      buttons: true,
-      dangerMode: true,
-    })
-    .then((okpressed) => {
-      if (okpressed) {
-       window.location.reload()
-        
-      } 
-      else {
-        unmout()
-      }
-    });
+ 
+     if(staselectedFilete !==null)
+     {
+      onClickHandler()
+    let name1 = Date.now().toString().substring(0,7)
+
+    let name2 = staselectedFilete[0].name
+    image = "http://localhost:3000/imageuplod/"+name1 + "-" +name2
+    console.log(image)
+     }
+     else
+     {
+     image = null
+    }
+    setTimeout(() => {
+      let x = Object.values(refinput).map(el => el.value)
+props.postnewproduct(x,image)
+props.setnewhistoriquefromapi(x,'ajoute produit')
+swal({
+  title: "ajouter un nouvaux Produit?",
+  text: "voulez vous ajouter un nouveaux produit!",
+  icon: "info",
+  buttons: true,
+  dangerMode: true,
+})
+.then((okpressed) => {
+  if (okpressed) {
+   window.location.reload()
+    
+  } 
+  else {
+    unmout()
+  }
+});
+    }, 1000);
 
      
   }
@@ -71,20 +96,23 @@ function unmout()
  const onChangeHandler=event=>{
    let files = event.target.files
     if(checkMimeType(event) ){ 
-    // if return true allow to setState
+    // si true cherger le state
     setselectedFile(files)
   }
   }
  const onClickHandler = () => {
     const data = new FormData()
-      data.append('file',  staselectedFilete)
-       console.log(data , staselectedFilete)
+
+     
+       for(var x = 0; x<staselectedFilete.length; x++) {
+        data.append('file', staselectedFilete[x])
+      }
+      console.log(data , staselectedFilete)
     axios.post("http://localhost:8000/upload", data, {
-      onUploadProgress: ProgressEvent => {
-       
-          x =  (ProgressEvent.loaded / ProgressEvent.total*100)
-      
-      },
+
+
+
+
     })
       .then(res => { // then print response status
         toast.success('upload success')
@@ -95,7 +123,22 @@ function unmout()
         console.log(err)
       })
     }
+ const chekedcondition = () => 
+ { if( mychekbox.current.checked){
 
+ //file.current.style="display: none"
+ //console.log(refinput.image.style="display: block")
+ setuncheked(true)
+ }
+ else
+ //console.log(refinput.image.style="display: none")
+ //file.current.style="display: block"
+
+ setuncheked(false)
+
+ 
+
+ }
   return (
     <div>
       <Navbar toggleMenu={setIsOpened} />
@@ -132,7 +175,11 @@ function unmout()
                 </div>
                 <div class="field">
                   <label>image</label>
-                  <p>  <input ref={e => refinput.image = e} type="text" placeholder="URL IMAGE" /></p>
+                  {uncheked ? <input ref={e => refinput.image = e} type="text" placeholder="URL IMAGE" /> :  
+              <input ref={file} type="file" class="form-control"  onChange={onChangeHandler}/> }
+           <small> si tu veux telecharger la photo de l'internet clicker sur le box</small>       <input class="form-check-input"  ref={mychekbox} onClick={chekedcondition} type="checkbox" value="" id="defaultCheck1"/>
+                 
+
                 </div>
               </div>
               <div className="three fields">
@@ -151,16 +198,14 @@ function unmout()
               </div>
               <div class="row">
       	  <div class="offset-md-3 col-md-6">
-               <div class="form-group files">
-                <label>Upload Your File </label>
-                <input type="file" class="form-control"  onChange={onChangeHandler}/>
+         
+        
+              
               </div>  
               <div class="form-group">
               <ToastContainer />
-              <ProgressBar max="100" color="success" value={x} >{Math.round(x,2) }%</ProgressBar>
         
               </div> 
-              </div>
               </div>
               <div class="field">
                 <br></br>

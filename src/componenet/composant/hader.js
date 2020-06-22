@@ -12,7 +12,7 @@ const NavWrapper = styled.div`
   left: 0;
   height: 60px;
   padding: 0 1rem;
-  background-color: #f5f4f3;
+  background-color: #a59891;
   z-index : 10;
 `;
 
@@ -54,7 +54,9 @@ const Navbar = ({ toggleMenu }) => {
         <span />
       </BurgerMenu>
       <img src={logo} alt="logo" width="100px"></img>
-      <p style={{color:"#333"}}>Something here</p>
+      <div width ="300px">
+      <p style={{color:"#333"}}>Nom user <button class="ui inverted button">Log out</button></p>
+      </div>
     </NavWrapper>
   );
 };

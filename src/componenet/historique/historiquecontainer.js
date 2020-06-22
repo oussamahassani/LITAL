@@ -79,7 +79,7 @@ import Historiqueitem from './historiqueitem'
   <Sidebar show={isOpened} setIsOpened={setIsOpened} />
   <div className="Content">
   <h3>Historique Letal</h3>
-  <div className="row">
+  <div className="">
     <div className="dispalyflexbettwen">
 
     <div className="col-xs-12 box_change_pagelimit">

@@ -27,8 +27,7 @@ import swal from 'sweetalert';
     
      swal("Done!", "le produit a eté suprimer!", "success")
     .then((okpressed) => {
-      if(okpressed) 
-      window.location.reload()
+    
 
     })
       
@@ -59,7 +58,7 @@ import swal from 'sweetalert';
      <td>{props.product.reference}</td>
      <td>{props.product.color}</td>
      <td>{props.product.quantite}</td>
-     <td className="alignitem"><img src={props.product.image} alt={props.product.name + props.product.id} width="100px"/></td>
+     <td className="alignitem"><img src= {props.product.image} alt={props.product.name + props.product.id} width="100px"/></td>
     
      <td><a href={'comentaire?' + props.product.id}><i class="facebook messenger icon"></i>{x.length}</a></td>
      <td > <div className="flex-bettwen"><button onClick={()=>delate() } class="bagroundcolortransparent colorred"><i class="trash icon"></i></button>{" "}
@@ -91,11 +90,11 @@ import swal from 'sweetalert';
        <tr>
    <td>{props.product.id}</td>
 <td>{props.product.name}</td>
-<td>{props.product.type}</td>
+<td>{props.product.type}</td> 
 <td>{props.product.collection}</td>
 <td>{props.product.marque}</td>
 <td>{props.product.reference}</td>
-<td className="alignitem"><img src={props.product.image} alt={props.product.name + props.product.id} width="100px"/></td>
+<td className="alignitem"><img src={props.product.image}  alt={props.product.name + props.product.id} width="100px"/></td>
 <td>{props.product.prix}</td>
 <td>{props.product.color}</td>
 <td>{props.product.dateajoute}</td>

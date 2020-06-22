@@ -30,7 +30,7 @@ setolde(x)
       console.log("new date est " , newdata)
        props.updatedateprodact(old)
        props.setnewhistoriquefromapi(Object.values(old),"modification")
-        contenu.current.innerHTML= "<div> Votre Donner A eté modifier avec Succeé</div>"
+        contenu.current.innerHTML= "<div><h1> Votre Donner A eté modifier avec Succeé<h1></div>"
 
     }
     return (
@@ -39,9 +39,10 @@ setolde(x)
    <Background setIsOpened={isOpened} show={isOpened} />
    <Sidebar show={isOpened} setIsOpened={setIsOpened} />
    <div className="Content" ref={contenu}>
-    <h3 className="centre-item"> Modifier le utilisateur de l'id  {newdata.id}</h3>
+    <h3 className="centre-item"> Modifier de produit Numero  {newdata.id}</h3>
        <div className="contenaire bagroundgray">
            <br/><br/>
+           <div className="ui inverted segment">
        <div  className="row">
            <div className="Name col-sm">
                <label className="col-sm-4">Name</label>
@@ -88,6 +89,7 @@ setolde(x)
   </div>
           <button style={{ marginTop: '30px'}} onClick={unmount} className="ui inverted yellow  button centre-item ">Update produit </button>
        
+        </div>
         </div>
         </div>
         </>
